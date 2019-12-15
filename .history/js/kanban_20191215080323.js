@@ -35,10 +35,7 @@ const create_item = () => {
     if(input.value!= "") {
       order+=1;
       item.innerHTML=input.value;
-      adding=false;
-    }
-    else {
-      error.innerHTML=message;
+      item.adding=false;
     }
   });
   item.appendChild(save_btn);
@@ -47,7 +44,7 @@ const create_item = () => {
 
 document.querySelectorAll('.drop').forEach(element => {
   element.addEventListener('drop', event => {
-      event.preventDefault();
+      event.preventDefault;
       const id = event.dataTransfer.getData();
       event.target.appendChild(document.getElementById(id));
   })
